@@ -442,6 +442,9 @@ p {
 .plus__right {
   margin-left: -15px; }
 
+.slider-2 {
+  display: none; }
+
 .pair__people {
   position: absolute;
   top: 90px;
@@ -534,3 +537,69 @@ p {
 .pair__site {
   top: 30px;
   left: 20px; }
+
+.finish__text-block {
+  top: 40px;
+  left: 34px;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s; }
+
+.finish__text-block,
+.finish__pack,
+.finish__label {
+  position: absolute;
+  -webkit-animation-name: finish;
+  animation-name: finish;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+@-webkit-keyframes finish {
+  5% {
+    opacity: .3; }
+  20% {
+    opacity: .4; }
+  40% {
+    opacity: .5; }
+  60% {
+    opacity: .6; }
+  80% {
+    opacity: .7; }
+  90% {
+    opacity: .9; }
+  100% {
+    opacity: 1; } }
+
+@keyframes finish {
+  5% {
+    opacity: .3; }
+  20% {
+    opacity: .4; }
+  40% {
+    opacity: .5; }
+  60% {
+    opacity: .6; }
+  80% {
+    opacity: .7; }
+  90% {
+    opacity: .9; }
+  100% {
+    opacity: 1; } }
+
+.finish__pack {
+  top: 270px;
+  left: 32px;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s; }
+
+.finish__label {
+  top: 230px;
+  left: 85px;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s; }
