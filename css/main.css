@@ -445,10 +445,11 @@ p {
 .slider-2 {
   display: none; }
 
-.pair__people {
+.pair__people,
+.data,
+.pair__site,
+.pair__offer {
   position: absolute;
-  top: 90px;
-  left: 3px;
   opacity: 0;
   -webkit-animation-name: pair;
   animation-name: pair;
@@ -459,9 +460,7 @@ p {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s; }
+  animation-fill-mode: forwards; }
 
 @-webkit-keyframes pair {
   0% {
@@ -495,48 +494,29 @@ p {
   100% {
     opacity: 1; } }
 
+.pair__people {
+  top: 90px;
+  left: 3px;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s; }
+
 .data {
-  position: absolute;
-  opacity: 0;
   top: 330px;
   left: 67px;
-  -webkit-animation-name: pair;
-  animation-name: pair;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-.pair__site,
 .pair__offer {
-  position: absolute;
-  opacity: 0;
-  -webkit-animation-name: pair;
-  animation-name: pair;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  top: 37px;
+  left: 9px;
   -webkit-animation-delay: 2s;
   animation-delay: 2s; }
 
-.pair__offer {
-  top: 37px;
-  left: 9px; }
-
 .pair__site {
   top: 30px;
-  left: 20px; }
+  left: 20px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
 
 .finish__text-block {
   top: 40px;
