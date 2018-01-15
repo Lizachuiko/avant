@@ -1,71 +1,10 @@
-
-.wrapper {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-color: rgb(11, 32, 32);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-  }
-
-
-
-.content {
-	width: 240px;
-	height: 400px;
-	background: linear-gradient(to top, #614994, #41217e);
-	position: relative;
-	overflow: hidden;
-}
-
-.slider-1 {
-	  display: none;
-  }
-
-.logo {
-	position: absolute;
-	top: 5px;
-	right: 10px;
-}
-
-.medtext {
-	position: absolute;
-	bottom: -5px;
-	left: 3px;
-}
-
 .maincontent {
 	position: relative;
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
 }
 
 .rays {
 	position: relative;
 }
-
-.rays__img {
-	position: absolute;
-	width: 140%;
-	top: -30px;
-	left: -40px;
-	height: auto;
-	animation-name: rotate;
-	animation-timing-function: ease;
-	animation-iteration-count: 1;
-	animation-duration: 2s;
-	animation-fill-mode: forwards;
-	animation-delay: 1s;
-}
-
-@keyframes rotate {
-	0%   { transform: rotate(0deg); }
-	50% { transform: rotate(360deg);}
-	100% { transform: rotate(360deg); }
-  }
 
 .casino {
 	position: absolute;
@@ -74,19 +13,17 @@
 
 .casino__img {
 	filter: drop-shadow(0 0 10px rgb(54, 54, 54));
-
 }
 
 .windows__img {
 	position: absolute;
 	top: 127px;
     left: 54px;
-	// z-index: 5;
 }
 
-// .window-dark {
-// 	z-index: 5;
-// }
+.window-dark {
+	z-index: 5;
+}
 
 .site {
 	position: absolute;
@@ -102,7 +39,6 @@
 
 .casino__img {
 	position: absolute;
-	// transition: opacity 1s ease;
 }
 
 .handle__up {
@@ -110,7 +46,7 @@
 	animation-name: slot1;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;
-	animation-duration: 0.8s;
+	animation-duration: .5s;
 	animation-direction: alternate;
 	animation-fill-mode: forwards;
 }
@@ -120,10 +56,10 @@
 	animation-name: slot2;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;
-	animation-duration: 0.8s;
+	animation-duration: .5s;
 	animation-direction: alternate;
 	animation-fill-mode: forwards;
-	animation-delay: 0.4s;
+	animation-delay: .3s;
 }
 .handle__down {
 	transform: translateX(15%) translateY(74%);
@@ -131,10 +67,10 @@
 	animation-name: slot3;
 	animation-timing-function: ease;
 	animation-iteration-count: 1;
-	animation-duration: 0.8s;
+	animation-duration: .5s;
 	animation-direction: alternate;
 	animation-fill-mode: forwards;
-	animation-delay: 0.8s;
+	animation-delay: .5s;
 
 }
 
@@ -187,6 +123,26 @@
 			}
 }
 
+.rays__img {
+	position: absolute;
+	width: 140%;
+	top: -30px;
+	left: -40px;
+	height: auto;
+	animation-name: rotate;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+
+@keyframes rotate {
+	0%   { transform: rotate(0deg); }
+	50% { transform: rotate(360deg);}
+	100% { transform: rotate(360deg); }
+  }
+
 .basiron-pack {
 	position: absolute;
 	top: 270px;
@@ -196,7 +152,7 @@
 	animation-iteration-count: 1;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	animation-delay: 2s;
+	animation-delay: 3s;
 }
 
 
@@ -215,7 +171,7 @@
 	animation-iteration-count: 1;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
-	animation-delay: 3s;
+	animation-delay: 4s;
 }
 
 @keyframes label{0%{opacity:.3}20%{opacity:.4}40%{opacity:.5}60%{opacity:.6}80%{opacity:.7}90%{opacity:.9}100%{opacity:1}}
@@ -241,26 +197,33 @@
 	overflow: hidden;
 }
 
-.slot__left {
-	align-items: flex-end;
-	animation-name: slot-left;
-	animation-timing-function: linear;
+.slot__left,
+.slot__right {
+	animation-name: slot;
+	animation-timing-function: ease-out;
 	animation-iteration-count: 1;
 	animation-duration: 2s;
-	// animation-fill-mode: forwards;
-	animation-delay: 4s;
+	animation-fill-mode: backwards;
+	animation-delay: 1s;
 }
 
-@keyframes slot-left {
-	5% { transform: translate(0, 100px); }
-	20% { transform: translate(0, -200px); }
-	40% { transform: translate(0, 200px); }
-	60% { transform: translate(0, -200px); }
-	100% { transform: translate(0px, 200px); }
+@keyframes slot {
+	0% { transform: translate(0, 0px);
+		}
+	2% { transform: translate(0, 400px);
+		 }
+	20% { transform: translate(0, -800px); }
+	40% { transform: translate(0, 800px); }
+	60% { transform: translate(0, -800px); }
+	100% { transform: translate(0, 400px);
+		 }
   }
 
 .slot__right {
 	align-items: flex-start;
+}
+.slot__left {
+	align-items: flex-end;
 }
 
 .number {

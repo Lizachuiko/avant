@@ -60,11 +60,8 @@ p {
   background: -webkit-linear-gradient(bottom, #614994, #41217e);
   background: -o-linear-gradient(bottom, #614994, #41217e);
   background: linear-gradient(to top, #614994, #41217e);
-  position: relative;
+  position: fixed;
   overflow: hidden; }
-
-.slider-1 {
-  display: none; }
 
 .logo {
   position: absolute;
@@ -76,52 +73,63 @@ p {
   bottom: -5px;
   left: 3px; }
 
+.slider-2,
+.slider-3,
+.slider-1 {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-animation-name: sliders;
+  animation-name: sliders;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.slider-1 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+.slider-2 {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s; }
+
+.slider-3 {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s; }
+
+@-webkit-keyframes sliders {
+  0% {
+    visibility: visible;
+    opacity: 1; }
+  99% {
+    visibility: visible;
+    opacity: 1; }
+  100% {
+    visibility: hidden;
+    opacity: 0; } }
+
+@keyframes sliders {
+  0% {
+    visibility: visible;
+    opacity: 1; }
+  99% {
+    visibility: visible;
+    opacity: 1; }
+  100% {
+    visibility: hidden;
+    opacity: 0; } }
+
 .maincontent {
   position: relative; }
 
 .rays {
   position: relative; }
-
-.rays__img {
-  position: absolute;
-  width: 140%;
-  top: -30px;
-  left: -40px;
-  height: auto;
-  -webkit-animation-name: rotate;
-  animation-name: rotate;
-  -webkit-animation-timing-function: ease;
-  animation-timing-function: ease;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s; }
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
-@keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  50% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
 
 .casino {
   position: absolute;
@@ -137,6 +145,9 @@ p {
   position: absolute;
   top: 127px;
   left: 54px; }
+
+.window-dark {
+  z-index: 5; }
 
 .site {
   position: absolute;
@@ -161,8 +172,8 @@ p {
   animation-timing-function: ease;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-duration: 0.8s;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
   -webkit-animation-fill-mode: forwards;
@@ -179,14 +190,14 @@ p {
   animation-timing-function: ease;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-duration: 0.8s;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s; }
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s; }
 
 .handle__down {
   -webkit-transform: translateX(15%) translateY(74%);
@@ -199,14 +210,14 @@ p {
   animation-timing-function: ease;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-duration: 0.8s;
-  animation-duration: 0.8s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s; }
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s; }
 
 @-webkit-keyframes slot1 {
   0% {
@@ -268,6 +279,47 @@ p {
   100% {
     visibility: visible; } }
 
+.rays__img {
+  position: absolute;
+  width: 140%;
+  top: -30px;
+  left: -40px;
+  height: auto;
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 .basiron-pack {
   position: absolute;
   top: 270px;
@@ -282,8 +334,8 @@ p {
   animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s; }
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s; }
 
 @-webkit-keyframes basiron {
   0% {
@@ -316,8 +368,8 @@ p {
   animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s; }
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s; }
 
 @-webkit-keyframes label {
   0% {
@@ -376,59 +428,70 @@ p {
   text-align: center;
   overflow: hidden; }
 
-.slot__left {
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  -webkit-animation-name: slot-left;
-  animation-name: slot-left;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
+.slot__left,
+.slot__right {
+  -webkit-animation-name: slot;
+  animation-name: slot;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s; }
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
 
-@-webkit-keyframes slot-left {
-  5% {
-    -webkit-transform: translate(0, 100px);
-    transform: translate(0, 100px); }
+@-webkit-keyframes slot {
+  0% {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px); }
+  2% {
+    -webkit-transform: translate(0, 400px);
+    transform: translate(0, 400px); }
   20% {
-    -webkit-transform: translate(0, -200px);
-    transform: translate(0, -200px); }
+    -webkit-transform: translate(0, -800px);
+    transform: translate(0, -800px); }
   40% {
-    -webkit-transform: translate(0, 200px);
-    transform: translate(0, 200px); }
+    -webkit-transform: translate(0, 800px);
+    transform: translate(0, 800px); }
   60% {
-    -webkit-transform: translate(0, -200px);
-    transform: translate(0, -200px); }
+    -webkit-transform: translate(0, -800px);
+    transform: translate(0, -800px); }
   100% {
-    -webkit-transform: translate(0px, 200px);
-    transform: translate(0px, 200px); } }
+    -webkit-transform: translate(0, 400px);
+    transform: translate(0, 400px); } }
 
-@keyframes slot-left {
-  5% {
-    -webkit-transform: translate(0, 100px);
-    transform: translate(0, 100px); }
+@keyframes slot {
+  0% {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px); }
+  2% {
+    -webkit-transform: translate(0, 400px);
+    transform: translate(0, 400px); }
   20% {
-    -webkit-transform: translate(0, -200px);
-    transform: translate(0, -200px); }
+    -webkit-transform: translate(0, -800px);
+    transform: translate(0, -800px); }
   40% {
-    -webkit-transform: translate(0, 200px);
-    transform: translate(0, 200px); }
+    -webkit-transform: translate(0, 800px);
+    transform: translate(0, 800px); }
   60% {
-    -webkit-transform: translate(0, -200px);
-    transform: translate(0, -200px); }
+    -webkit-transform: translate(0, -800px);
+    transform: translate(0, -800px); }
   100% {
-    -webkit-transform: translate(0px, 200px);
-    transform: translate(0px, 200px); } }
+    -webkit-transform: translate(0, 400px);
+    transform: translate(0, 400px); } }
 
 .slot__right {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start; }
+
+.slot__left {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end; }
 
 .number {
   width: 55%; }
@@ -441,9 +504,6 @@ p {
 
 .plus__right {
   margin-left: -15px; }
-
-.slider-2 {
-  display: none; }
 
 .pair__people,
 .data,
@@ -497,32 +557,32 @@ p {
 .pair__people {
   top: 90px;
   left: 3px;
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s; }
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s; }
 
 .data {
   top: 330px;
   left: 67px;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s; }
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s; }
 
 .pair__offer {
   top: 37px;
   left: 9px;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s; }
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s; }
 
 .pair__site {
   top: 30px;
   left: 20px;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s; }
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s; }
 
 .finish__text-block {
   top: 40px;
   left: 34px;
-  -webkit-animation-delay: .5s;
-  animation-delay: .5s; }
+  -webkit-animation-delay: 11s;
+  animation-delay: 11s; }
 
 .finish__text-block,
 .finish__pack,
@@ -575,11 +635,11 @@ p {
 .finish__pack {
   top: 270px;
   left: 32px;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s; }
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s; }
 
 .finish__label {
   top: 230px;
   left: 85px;
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s; }
+  -webkit-animation-delay: 13s;
+  animation-delay: 13s; }
