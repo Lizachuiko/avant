@@ -63,6 +63,9 @@ p {
   position: relative;
   overflow: hidden; }
 
+.slider-1 {
+  display: none; }
+
 .logo {
   position: absolute;
   top: 5px;
@@ -438,3 +441,96 @@ p {
 
 .plus__right {
   margin-left: -15px; }
+
+.pair__people {
+  position: absolute;
+  top: 90px;
+  left: 3px;
+  opacity: 0;
+  -webkit-animation-name: pair;
+  animation-name: pair;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s; }
+
+@-webkit-keyframes pair {
+  0% {
+    opacity: .3; }
+  20% {
+    opacity: .4; }
+  40% {
+    opacity: .5; }
+  60% {
+    opacity: .6; }
+  80% {
+    opacity: .7; }
+  90% {
+    opacity: .9; }
+  100% {
+    opacity: 1; } }
+
+@keyframes pair {
+  0% {
+    opacity: .3; }
+  20% {
+    opacity: .4; }
+  40% {
+    opacity: .5; }
+  60% {
+    opacity: .6; }
+  80% {
+    opacity: .7; }
+  90% {
+    opacity: .9; }
+  100% {
+    opacity: 1; } }
+
+.data {
+  position: absolute;
+  opacity: 0;
+  top: 330px;
+  left: 67px;
+  -webkit-animation-name: pair;
+  animation-name: pair;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.pair__site,
+.pair__offer {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation-name: pair;
+  animation-name: pair;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+.pair__offer {
+  top: 37px;
+  left: 9px; }
+
+.pair__site {
+  top: 30px;
+  left: 20px; }
