@@ -78,6 +78,8 @@ html {
 	left: 3px;
 }
 
+
+
 .slider-2,
 .slider-3,
 .slider-1  {
@@ -92,6 +94,10 @@ html {
 }
 .slider-1 {
 	animation-delay: 0s;
+.slider-1 {
+	visibility: visible;
+	opacity: 1;
+}
 
 }
 .slider-2 {
@@ -116,8 +122,6 @@ html {
 	opacity: 0;
 	}
 	}
-
-
 
 
 @import "slides/casino";
