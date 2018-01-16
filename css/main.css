@@ -370,8 +370,8 @@ p {
     -webkit-transform: translate(0, 400px);
     transform: translate(0, 400px); }
   100% {
-    -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); } }
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px); } }
 
 @keyframes slot-left {
   0% {
@@ -399,8 +399,8 @@ p {
     -webkit-transform: translate(0, 400px);
     transform: translate(0, 400px); }
   100% {
-    -webkit-transform: translate(0, 0px);
-    transform: translate(0, 0px); } }
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px); } }
 
 @-webkit-keyframes slot-right {
   0% {
@@ -428,8 +428,8 @@ p {
     -webkit-transform: translate(0, 400px);
     transform: translate(0, 400px); }
   100% {
-    -webkit-transform: translate(0, 30px);
-    transform: translate(0, 30px); } }
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px); } }
 
 @keyframes slot-right {
   0% {
@@ -457,8 +457,8 @@ p {
     -webkit-transform: translate(0, 400px);
     transform: translate(0, 400px); }
   100% {
-    -webkit-transform: translate(0, 30px);
-    transform: translate(0, 30px); } }
+    -webkit-transform: translate(0, 20px);
+    transform: translate(0, 20px); } }
 
 .slot__right {
   margin-top: -30px; }

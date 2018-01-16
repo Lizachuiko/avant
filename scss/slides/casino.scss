@@ -171,7 +171,7 @@
 	50% { transform: translate(0, 400px);}
 	60% { transform: translate(0, -400px);}
 	70% { transform: translate(0, 400px);}
-	100% { transform: translate(0, 0px);}
+	100% { transform: translate(0, -10px);}
 }
 
 @keyframes slot-right {
@@ -183,7 +183,7 @@
 	50% { transform: translate(0, 400px);}
 	60% { transform: translate(0, -400px);}
 	70% { transform: translate(0, 400px);}
-	100% { transform: translate(0, 30px);}
+	100% { transform: translate(0, 20px);}
 }
 
 .slot__right {
