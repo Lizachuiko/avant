@@ -81,7 +81,6 @@ html {
 
 
 .slider-2,
-.slider-3,
 .slider-1  {
 	visibility: hidden;
 	opacity: 0;
@@ -92,14 +91,14 @@ html {
 	animation-direction: alternate;
 	animation-fill-mode: forwards;
 }
+
 .slider-1 {
-	animation-delay: 0s;
-.slider-1 {
+	animation-delay: 1s;
 	visibility: visible;
 	opacity: 1;
 }
 
-}
+
 .slider-2 {
 	animation-delay: 5s;
 }
@@ -122,6 +121,34 @@ html {
 	opacity: 0;
 	}
 	}
+
+
+	.slider-3 {
+		animation-name: slider-finish;
+		visibility: hidden;
+		opacity: 0;
+		animation-timing-function: linear;
+		animation-iteration-count: 1;
+		animation-duration: 5s;
+		animation-direction: alternate;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes slider-finish {
+		0% {
+		visibility: visible;
+		opacity: 1;
+		}
+		99% {
+			visibility: visible;
+			opacity: 1;
+			}
+		100% {
+		visibility: visible;
+		opacity: 1;
+		}
+		}
+
 
 
 @import "slides/casino";

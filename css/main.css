@@ -74,7 +74,6 @@ p {
   left: 3px; }
 
 .slider-2,
-.slider-3,
 .slider-1 {
   visibility: hidden;
   opacity: 0;
@@ -92,11 +91,10 @@ p {
   animation-fill-mode: forwards; }
 
 .slider-1 {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s; }
-  .slider-1 .slider-1 {
-    visibility: visible;
-    opacity: 1; }
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  visibility: visible;
+  opacity: 1; }
 
 .slider-2 {
   -webkit-animation-delay: 5s;
@@ -127,6 +125,44 @@ p {
   100% {
     visibility: hidden;
     opacity: 0; } }
+
+.slider-3 {
+  -webkit-animation-name: slider-finish;
+  animation-name: slider-finish;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@-webkit-keyframes slider-finish {
+  0% {
+    visibility: visible;
+    opacity: 1; }
+  99% {
+    visibility: visible;
+    opacity: 1; }
+  100% {
+    visibility: visible;
+    opacity: 1; } }
+
+@keyframes slider-finish {
+  0% {
+    visibility: visible;
+    opacity: 1; }
+  99% {
+    visibility: visible;
+    opacity: 1; }
+  100% {
+    visibility: visible;
+    opacity: 1; } }
 
 .maincontent {
   position: relative; }
